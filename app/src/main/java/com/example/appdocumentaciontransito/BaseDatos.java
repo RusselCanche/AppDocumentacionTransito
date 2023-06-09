@@ -31,6 +31,13 @@ public class BaseDatos extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS propietario");
         db.execSQL("DROP TABLE IF EXISTS usuario");
+        db.execSQL("DROP TABLE IF EXISTS licencia");
+        db.execSQL("DROP TABLE IF EXISTS vehiculo");
+        db.execSQL("DROP TABLE IF EXISTS tarjeta_circulacion");
+        db.execSQL("DROP TABLE IF EXISTS estado");
+        db.execSQL("DROP TABLE IF EXISTS tipo_multa");
+        db.execSQL("DROP TABLE IF EXISTS tipo_multa_estado");
+        db.execSQL("DROP TABLE IF EXISTS multa");
         onCreate(db);
     }
 }
