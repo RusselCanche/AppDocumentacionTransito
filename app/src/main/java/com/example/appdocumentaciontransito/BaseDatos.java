@@ -15,14 +15,14 @@ public class BaseDatos extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE usuario(username text PRIMARY KEY, contrasenia text,curp_propietario text)");
         db.execSQL("CREATE TABLE propietario(curp text PRIMARY KEY, nombre text,paterno text, materno text, fecha_nacimiento text, sexo text, telefono text, domicilio text)");
+        db.execSQL("CREATE TABLE usuario(username text PRIMARY KEY, contrasenia text,curp_propietario text, FOREIGN KEY(curp_propietario) REFERENCES propietario(curp))");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS usuario");
         db.execSQL("DROP TABLE IF EXISTS propietario");
+        db.execSQL("DROP TABLE IF EXISTS usuario");
         onCreate(db);
     }
 }
