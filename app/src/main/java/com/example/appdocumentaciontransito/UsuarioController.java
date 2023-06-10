@@ -18,13 +18,35 @@ public class UsuarioController {
         bdSQLite= new BaseDatos(contexto);
         bd = bdSQLite.getWritableDatabase();
     }
-    public Usuario existe(String clave){
+
+    public boolean existe(String clave){
+        fila = bd.rawQuery("SELECT * FROM usuario WHERE username='" + clave+"'", null);
+        if (fila.moveToFirst()) {
+            return true;
+        }
+        return false;
+    }
+    public Usuario getUsuario(String clave){
         fila = bd.rawQuery("SELECT * FROM usuario WHERE username='" + clave+"'", null);
         if (fila.moveToFirst()) {
             return generarUsuario(fila);
         }
         return null;
     }
+
+    public boolean datosCorrectos(String user, String pass){
+        if(existe(user)){
+            Usuario usuario = new Usuario();
+            usuario = getUsuario(user);
+            if(usuario.getUsername().equals(user) && usuario.getContrasenia().equals(pass)){
+                System.out.println(usuario.getUsername());
+                System.out.println(usuario.getContrasenia());
+                return true;
+            }
+        }
+        return false;
+    }
+
     public List<Usuario> obtenerUsuarios(){
         fila = bd.rawQuery("SELECT * FROM usuario", null);
         List<Usuario> usuarios = new ArrayList<>();
