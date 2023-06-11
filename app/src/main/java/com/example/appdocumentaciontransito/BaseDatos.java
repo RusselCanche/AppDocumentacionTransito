@@ -24,7 +24,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE tipo_multa(id INTEGER PRIMARY KEY AUTOINCREMENT, tipo text)");
         /* SEGÚN EL ESTADO MOSTRAR UN COMBOBOX CON LAS DIFERENTES MULTAS */
         db.execSQL("CREATE TABLE tipo_multa_estado(id INTEGER PRIMARY KEY AUTOINCREMENT, monto real, tipo_multa_id INTEGER, estado_id INTEGER, FOREIGN KEY(tipo_multa_id) REFERENCES tipo_multa(id), FOREIGN KEY(estado_id) REFERENCES estado(id))");
-        db.execSQL("CREATE TABLE multa(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha_multa text, fecha_limite text, monto_multa real, municipio text, status INTEGER, multa_estado_id INTEGER, FOREIGN KEY(multa_estado_id) REFERENCES tipo_multa_estado(id))");
+        db.execSQL("CREATE TABLE multa(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha_multa text, fecha_limite text, monto_multa real, municipio text, status INTEGER, multa_estado_id INTEGER, curp_propietario text, FOREIGN KEY(multa_estado_id) REFERENCES tipo_multa_estado(id), FOREIGN KEY(curp_propietario) REFERENCES propietario(curp))");
     }
 
     @Override

@@ -68,27 +68,65 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
     }
 
     public void guardar(View v) {
-        PropietarioController tablaPropietario = new PropietarioController(this);
-        UsuarioController tablaUsuario = new UsuarioController(this);
-        Propietario propietario = new Propietario();
-        Usuario usuario = new Usuario();
+        if(!hayCajasVacias()) {
+            PropietarioController tablaPropietario = new PropietarioController(this);
+            UsuarioController tablaUsuario = new UsuarioController(this);
+            Propietario propietario = new Propietario();
+            Usuario usuario = new Usuario();
+            if(!tablaUsuario.existe(curp.getText().toString())){
+                propietario.setCurp(curp.getText().toString());
+                propietario.setNombre(nombre.getText().toString());
+                propietario.setPaterno(paterno.getText().toString());
+                propietario.setMaterno(materno.getText().toString());
+                propietario.setFechaNacimiento(txtFecha.getText().toString());
+                if (masculino.isChecked()) {
+                    propietario.setSexo("Masculino");
+                } else {
+                    propietario.setSexo("Femenino");
+                }
+                propietario.setTelefono(telefono.getText().toString());
+                propietario.setDomicilio(domicilio.getText().toString());
+                tablaPropietario.guardar(propietario);
 
-        propietario.setCurp(curp.getText().toString());
-        propietario.setNombre(nombre.getText().toString());
-        propietario.setPaterno(paterno.getText().toString());
-        propietario.setMaterno(materno.getText().toString());
-        propietario.setFechaNacimiento(txtFecha.getText().toString());
-        if(masculino.isChecked()){ propietario.setSexo("Masculino"); }
-        else { propietario.setSexo("Femenino"); }
-        propietario.setTelefono(telefono.getText().toString());
-        propietario.setDomicilio(domicilio.getText().toString());
-        tablaPropietario.guardar(propietario);
+                usuario.setUsername(user.getText().toString());
+                usuario.setContrasenia(contrasenia.getText().toString());
+                usuario.setCurpPropietario(curp.getText().toString());
+                tablaUsuario.guardar(usuario);
 
-        usuario.setUsername(user.getText().toString());
-        usuario.setContrasenia(contrasenia.getText().toString());
-        usuario.setCurpPropietario(curp.getText().toString());
-        tablaUsuario.guardar(usuario);
+                Toast.makeText(this, "Sus datos se han registrado correctamente", Toast.LENGTH_SHORT).show();
+                limpiarCajas();
+            } else
+                Toast.makeText(this, "Ese usuario ya esta siendo utilizado, por favor intenta con otro.", Toast.LENGTH_SHORT).show();
+        } else
+            Toast.makeText(this, "¡Debe de ingresar todos los datos!", Toast.LENGTH_SHORT).show();
+    }
 
-        Toast.makeText(this, "Sus datos se han registrado correctamente", Toast.LENGTH_SHORT).show();
+    private boolean hayCajasVacias(){
+        boolean b1 = curp.getText().toString().equals("");
+        boolean b2 = nombre.getText().toString().equals("");
+        boolean b3 = paterno.getText().toString().equals("");
+        boolean b4 = materno.getText().toString().equals("");
+        boolean b5 = txtFecha.getText().toString().equals("");
+        boolean b6 = telefono.getText().toString().equals("");
+        boolean b7 = domicilio.getText().toString().equals("");
+        boolean b8 = user.getText().toString().equals("");
+        boolean b9 = contrasenia.getText().toString().equals("");
+        if(b1||b2||b3||b4||b5||b6||b7||b8||b9)
+            return true;
+        return false;
+    }
+
+    public void limpiarCajas(){
+        curp.setText("");
+        nombre.setText("");
+        paterno.setText("");
+        materno.setText("");
+        txtFecha.setText("");
+        masculino.setChecked(true);
+        telefono.setText("");
+        domicilio.setText("");
+        user.setText("");
+        contrasenia.setText("");
+        curp.requestFocus();
     }
 }

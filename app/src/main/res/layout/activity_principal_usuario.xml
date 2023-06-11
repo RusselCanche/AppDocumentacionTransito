@@ -13,4 +13,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="INICIO DE SESIÓN EXITOSO" />
+
+    <TextView
+        android:id="@+id/text_curp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/purple_700"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/text_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onVerLicencias"
+        android:text="Ver mis licencias" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onVerVehiculos"
+        android:text="Ver mis vehículos" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onCerrarSesion"
+        android:text="Cerrar sesión" />
 </LinearLayout>

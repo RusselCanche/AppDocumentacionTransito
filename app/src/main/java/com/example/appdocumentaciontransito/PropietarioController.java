@@ -51,6 +51,25 @@ public class PropietarioController {
 
         bd.insert("propietario", null, registro);
     }
+
+    public Propietario getPropietario(String curp){
+        Propietario propietario = new Propietario();
+        Cursor fila = bd.rawQuery("select * from propietario where curp = '"+curp+"'",null);
+        if(fila.moveToFirst()){
+            propietario = generarPropietario(fila);
+        }
+        return propietario;
+    }
+
+    public Propietario getPropietarioUsuario(String usuario){
+        Propietario propietario = new Propietario();
+        Cursor fila = bd.rawQuery("select * from propietario JOIN usuario on usuario.curp_propietario = propietario.curp WHERE username = '"+usuario+"'",null);
+        if(fila.moveToFirst()){
+            propietario = generarPropietario(fila);
+        }
+        return propietario;
+    }
+
     public Propietario generarPropietario(Cursor fila){
         Propietario propietario=new Propietario();
         propietario.setCurp(fila.getString(0));
