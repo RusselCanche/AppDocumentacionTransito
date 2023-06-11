@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.appdocumentaciontransito.modelo.Propietario;
+import com.example.appdocumentaciontransito.tablas.PropietarioController;
+import com.example.appdocumentaciontransito.tablas.UsuarioController;
+
 public class MainActivity extends AppCompatActivity {
     private EditText usuario;
     private EditText contrasenia;

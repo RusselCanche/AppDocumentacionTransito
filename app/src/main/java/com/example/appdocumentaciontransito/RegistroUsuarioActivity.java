@@ -11,6 +11,11 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.appdocumentaciontransito.modelo.Propietario;
+import com.example.appdocumentaciontransito.modelo.Usuario;
+import com.example.appdocumentaciontransito.tablas.PropietarioController;
+import com.example.appdocumentaciontransito.tablas.UsuarioController;
+
 public class RegistroUsuarioActivity extends AppCompatActivity {
     private EditText curp;
     private EditText nombre;

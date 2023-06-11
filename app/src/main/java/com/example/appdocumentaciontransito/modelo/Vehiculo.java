@@ -1,4 +1,4 @@
-package com.example.appdocumentaciontransito;
+package com.example.appdocumentaciontransito.modelo;
 
 public class Vehiculo {
     private String numeroSerie;

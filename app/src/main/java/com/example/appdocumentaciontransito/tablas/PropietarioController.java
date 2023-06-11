@@ -1,11 +1,13 @@
-package com.example.appdocumentaciontransito;
+package com.example.appdocumentaciontransito.tablas;
 
 import android.app.Activity;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import java.security.Policy;
+import com.example.appdocumentaciontransito.BaseDatos;
+import com.example.appdocumentaciontransito.modelo.Propietario;
+
 import java.util.ArrayList;
 import java.util.List;
 
