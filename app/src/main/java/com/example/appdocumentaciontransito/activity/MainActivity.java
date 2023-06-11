@@ -40,7 +40,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Bienvenido " + propietario.getNombre(), Toast.LENGTH_LONG).show();
             guardarEstado(propietario.getCurp(), propietario.getNombre());
             finish(); // CERRAR FORM DE INICIO DE SESIÓN
-            Intent intento = new Intent(this, PrincipalUsuarioActivity.class);
+            Intent intento = null;
+            if(usuario.getText().toString().equals("admin")&&contrasenia.getText().toString().equals("admin")){
+                intento = new Intent(this, InicioAdminActivity.class);
+            }else{
+                intento = new Intent(this, InicioUsuarioActivity.class);
+            }
             startActivity(intento);
         } else
             Toast.makeText(this, "Sus datos son incorrectos", Toast.LENGTH_SHORT).show();
