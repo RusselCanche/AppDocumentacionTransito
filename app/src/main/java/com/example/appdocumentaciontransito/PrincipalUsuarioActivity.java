@@ -10,6 +10,8 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.appdocumentaciontransito.activity.MainActivity;
+
 public class PrincipalUsuarioActivity extends AppCompatActivity {
     private TextView textCurp;
     private TextView textNombre;

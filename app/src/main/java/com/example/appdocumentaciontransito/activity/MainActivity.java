@@ -1,6 +1,4 @@
-package com.example.appdocumentaciontransito;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.appdocumentaciontransito.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +8,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.appdocumentaciontransito.PrincipalUsuarioActivity;
+import com.example.appdocumentaciontransito.R;
+import com.example.appdocumentaciontransito.RegistroUsuarioActivity;
 import com.example.appdocumentaciontransito.modelo.Propietario;
 import com.example.appdocumentaciontransito.tablas.PropietarioController;
 import com.example.appdocumentaciontransito.tablas.UsuarioController;
