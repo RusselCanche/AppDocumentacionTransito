@@ -11,6 +11,10 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_mi_perfil">Mi perfil</string>
+    <string name="menu_mis_licencias">Mis licencias</string>
+    <string name="menu_mis_vehiculos">Mis vehiculos</string>
+    <string name="menu_mis_multas">Mis multas</string>
     <string name="title_activity_inicio_usuario">InicioUsuarioActivity</string>
 
     <string name="action_logout">Cerrar Sesion</string>

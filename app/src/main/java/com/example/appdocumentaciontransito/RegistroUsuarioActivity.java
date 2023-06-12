@@ -9,6 +9,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.example.appdocumentaciontransito.modelo.Propietario;
@@ -40,7 +41,6 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
         materno = findViewById(R.id.edit_materno);
         paterno = findViewById(R.id.edit_paterno);
         dpFecha = (DatePicker) findViewById(R.id.dpFecha);
-        btnFecha = (ImageButton) findViewById(R.id.btnFecha);
         txtFecha = (EditText) findViewById(R.id.edit_fecha_nac);
         masculino = findViewById(R.id.radio_masculino);
         femenino = findViewById(R.id.radio_femenino);
@@ -55,7 +55,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
             @Override
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
                 txtFecha.setText(getFechaPicker());
-                dpFecha.setVisibility(View.GONE);
+                //dpFecha.setVisibility(View.GONE);
             }
         });
     }
@@ -68,8 +68,12 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
         return anio + "-" + mes + "-" + dia;
     }
 
-    public void muestraCalendario(View view){
-        dpFecha.setVisibility(View.VISIBLE);
+    private void muestraCalendario(View view){
+        if(dpFecha.getVisibility() == View.VISIBLE){
+            dpFecha.setVisibility(View.GONE);
+        }else{
+            dpFecha.setVisibility(View.VISIBLE);
+        }
     }
 
     public void guardar(View v) {
