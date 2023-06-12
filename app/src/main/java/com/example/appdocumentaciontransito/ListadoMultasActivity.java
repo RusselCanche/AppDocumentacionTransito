@@ -33,8 +33,6 @@ public class ListadoMultasActivity extends AppCompatActivity {
 
         lvTiposMultas = findViewById(R.id.lv_tipos_multas);
         tablaTipoMulta = new TablaTipoMulta(this);
-
-
     }
     @Override
     public void onResume(){
@@ -59,8 +57,8 @@ public class ListadoMultasActivity extends AppCompatActivity {
 
     }
 
-    public void onRegistrarTipoMulta(View view){
-        Intent intento = new Intent(this, RegistrarTipoMultaActivity.class);
+    public void onRegistrarMulta(View view){
+        Intent intento = new Intent(this, RegistrarMultaActivity.class);
         startActivity(intento);
     }
 }
