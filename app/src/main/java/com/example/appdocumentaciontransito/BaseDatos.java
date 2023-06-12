@@ -21,11 +21,9 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL("create table vehiculo(numero_serie text primary key, numero_placas text, marca text, modelo text, anio text, tipo text, numero_motor text, curp_propietario text, foreign key(curp_propietario) references propietario(curp))");
         db.execSQL("create table tarjeta_circulacion(numero_serie_tarjeta text primary key, fecha_emision text, fecha_expiracion text, estado_emision text, imagen_tarjeta text, numero_serie_vehiculo text, foreign key(numero_serie_vehiculo) references vehiculo(numero_serie))");
         db.execSQL("create table verificacion_vehicular(numero_verificacion text PRIMARY KEY, tipo_combustible text, resultado text, fecha_verificacion text, fecha_proxima_verificacion text, certificado_verificacion text, numero_serie_vehiculo text, foreign key(numero_serie_vehiculo) references vehiculo(numero_serie))");
-        db.execSQL("CREATE TABLE estado(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre text)");
-        db.execSQL("CREATE TABLE tipo_multa(id INTEGER PRIMARY KEY AUTOINCREMENT, tipo text)");
         /* SEGÚN EL ESTADO MOSTRAR UN COMBOBOX CON LAS DIFERENTES MULTAS */
-        db.execSQL("CREATE TABLE tipo_multa_estado(id INTEGER PRIMARY KEY AUTOINCREMENT, monto real, tipo_multa_id INTEGER, estado_id INTEGER, FOREIGN KEY(tipo_multa_id) REFERENCES tipo_multa(id), FOREIGN KEY(estado_id) REFERENCES estado(id))");
-        db.execSQL("CREATE TABLE multa(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha_multa text, fecha_limite text, monto_multa real, municipio text, status INTEGER, multa_estado_id INTEGER, curp_propietario text, FOREIGN KEY(multa_estado_id) REFERENCES tipo_multa_estado(id), FOREIGN KEY(curp_propietario) REFERENCES propietario(curp))");
+        db.execSQL("CREATE TABLE tipo_multa_estado(id INTEGER PRIMARY KEY AUTOINCREMENT, monto text, tipo_multa text, descripcion text, estado text)");
+        db.execSQL("CREATE TABLE multa(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha_multa text, fecha_limite text, monto_multa text, municipio text, status text, multa_estado_id INTEGER, curp_propietario text, FOREIGN KEY(multa_estado_id) REFERENCES tipo_multa_estado(id), FOREIGN KEY(curp_propietario) REFERENCES propietario(curp))");
     }
 
     @Override
@@ -36,8 +34,6 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS vehiculo");
         db.execSQL("DROP TABLE IF EXISTS tarjeta_circulacion");
         db.execSQL("DROP TABLE IF EXISTS verificacion_vehicular");
-        db.execSQL("DROP TABLE IF EXISTS estado");
-        db.execSQL("DROP TABLE IF EXISTS tipo_multa");
         db.execSQL("DROP TABLE IF EXISTS tipo_multa_estado");
         db.execSQL("DROP TABLE IF EXISTS multa");
         onCreate(db);

@@ -20,12 +20,12 @@
             android:name=".activity.InicioUsuarioActivity"
             android:exported="false"
             android:label="@string/title_activity_inicio_usuario"
-            android:theme="@style/Theme.AppDocumentacionTransito.Usuario"></activity>
+            android:theme="@style/Theme.AppDocumentacionTransito.NoActionBar"></activity>
         <activity
             android:name=".activity.InicioAdminActivity"
             android:exported="false"
             android:label="@string/title_activity_inicio_admin"
-            android:theme="@style/Theme.AppDocumentacionTransito.Admin"></activity>
+            android:theme="@style/Theme.AppDocumentacionTransito.NoActionBar"></activity>
         <activity
             android:name=".DatosLicenciaActivity"
             android:exported="false" />

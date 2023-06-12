@@ -56,11 +56,19 @@ public class UsuarioController {
         if (fila.moveToFirst()) {
             do {
                 usuarios.add(new Usuario(fila.getString(0),fila.getString(1),fila.getString(2)));
-                // Do something Here with values
             } while(fila.moveToNext());
         }
         return usuarios;
     }
+
+    public Usuario obtenerUsuario(String curp){
+        fila = bd.rawQuery("SELECT * FROM usuario WHERE curp_propietario='" + curp+"'", null);
+        if (fila.moveToFirst()) {
+            return generarUsuario(fila);
+        }
+        return null;
+    }
+
     public void guardar(Usuario usuario){
         ContentValues registro = new ContentValues();
         registro.put("username", usuario.getUsername());
@@ -68,6 +76,15 @@ public class UsuarioController {
         registro.put("curp_propietario", usuario.getCurpPropietario());
         bd.insert("usuario", null, registro);
     }
+
+    public int modificar(Usuario usuario){
+        ContentValues registro = new ContentValues();
+        registro.put("username", usuario.getUsername());
+        registro.put("contrasenia", usuario.getContrasenia());
+        registro.put("curp_propietario", usuario.getCurpPropietario());
+        return bd.update("usuario", registro, "curp_propietario='" + usuario.getCurpPropietario() +"'", null);
+    }
+
     public Usuario generarUsuario(Cursor fila){
         Usuario usuario=new Usuario();
         usuario.setUsername(fila.getString(0));

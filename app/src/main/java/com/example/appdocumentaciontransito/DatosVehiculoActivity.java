@@ -218,9 +218,6 @@ public class DatosVehiculoActivity extends AppCompatActivity {
         // DE FORMA OBLIGATORIA SE MODIFICA VEHICULO Y TARJETA_CIRCULACION, VERIFICACION_VEHICULAR SOLO SI TIENE REGISTRO
         if (!hayCajasVacias(tieneVerificacion)) {
             SharedPreferences preferences = getSharedPreferences("sesion", Context.MODE_PRIVATE);
-            //tablaVehiculo = new TablaVehiculo(this);
-            //tablaTarjetaCirculacion = new TablaTarjetaCirculacion(this);
-            //tablaVerificacion = new TablaVerificacionVehicular(this);
             Vehiculo vehiculo = new Vehiculo();
             TarjetaCirculacion tarjetaCirculacion = new TarjetaCirculacion();
             VerificacionVehicular verificacion = new VerificacionVehicular();
