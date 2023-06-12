@@ -71,7 +71,7 @@ public class RegistrarVerificacionActivity extends AppCompatActivity {
             @Override
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
                 fechaVerificacion.setText(getFechaPicker(dpFechaVerificacion));
-                dpFechaVerificacion.setVisibility(View.GONE);
+                //dpFechaVerificacion.setVisibility(View.GONE);
             }
         });
 
@@ -80,11 +80,25 @@ public class RegistrarVerificacionActivity extends AppCompatActivity {
             @Override
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
                 fechaProxima.setText(getFechaPicker(dpProximaVerificacion));
-                dpProximaVerificacion.setVisibility(View.GONE);
+                //dpProximaVerificacion.setVisibility(View.GONE);
             }
         });
     }
 
+    public void muestraCalendarioVerificacion(View view){
+        if(dpFechaVerificacion.getVisibility() == View.VISIBLE){
+            dpFechaVerificacion.setVisibility(View.GONE);
+        }else{
+            dpFechaVerificacion.setVisibility(View.VISIBLE);
+        }
+    }
+    public void muestraCalendarioProxVerificacion(View view){
+        if(dpProximaVerificacion.getVisibility() == View.VISIBLE){
+            dpProximaVerificacion.setVisibility(View.GONE);
+        }else{
+            dpProximaVerificacion.setVisibility(View.VISIBLE);
+        }
+    }
     public void guardar(View v) {
         if (!hayCajasVacias()) {
             TablaVerificacionVehicular tablaVerificacion = new TablaVerificacionVehicular(this);

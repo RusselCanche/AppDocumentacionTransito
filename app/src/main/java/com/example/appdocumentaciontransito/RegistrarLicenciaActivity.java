@@ -165,14 +165,14 @@ public class RegistrarLicenciaActivity extends AppCompatActivity {
         imageLicencia.setVisibility(View.GONE);
     }
 
-    private void muestraCalendarioFem(View view){
+    public void muestraCalendarioFemLicencia(View view){
         if(dpFechaEmision.getVisibility() == View.VISIBLE){
             dpFechaEmision.setVisibility(View.GONE);
         }else{
             dpFechaEmision.setVisibility(View.VISIBLE);
         }
     }
-    private void muestraCalendarioFex(View view){
+    public void muestraCalendarioFexLicencia(View view){
         if(dpFechaExpiracion.getVisibility() == View.VISIBLE){
             dpFechaExpiracion.setVisibility(View.GONE);
         }else{

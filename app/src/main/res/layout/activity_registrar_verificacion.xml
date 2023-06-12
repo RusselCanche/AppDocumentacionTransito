@@ -90,8 +90,10 @@
 
     <DatePicker
         android:id="@+id/dpFechaVerificacion"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
         android:visibility="gone"></DatePicker>
 
     <TextView
@@ -126,8 +128,10 @@
 
     <DatePicker
         android:id="@+id/dpProximaFechaVerificacion"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
         android:visibility="gone"></DatePicker>
 
     <TextView

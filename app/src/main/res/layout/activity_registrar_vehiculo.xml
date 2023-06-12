@@ -164,14 +164,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="muestraCalendario"
+                    android:onClick="muestraCalendarioFemVehiculo"
                     app:srcCompat="@drawable/baseline_calendar_month_24" />
             </LinearLayout>
 
             <DatePicker
                 android:id="@+id/dpFechaEmisionCirculacion"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
                 android:visibility="gone"></DatePicker>
 
             <TextView
@@ -198,14 +200,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="muestraCalendario"
+                    android:onClick="muestraCalendarioFexVehiculo"
                     app:srcCompat="@drawable/baseline_calendar_month_24" />
             </LinearLayout>
 
             <DatePicker
                 android:id="@+id/dpFechaExpiracionCirculacion"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
                 android:visibility="gone"></DatePicker>
 
             <TextView

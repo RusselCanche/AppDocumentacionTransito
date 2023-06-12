@@ -68,7 +68,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
         return anio + "-" + mes + "-" + dia;
     }
 
-    private void muestraCalendario(View view){
+    public void muestraCalendarioFnacUsuario(View view){
         if(dpFecha.getVisibility() == View.VISIBLE){
             dpFecha.setVisibility(View.GONE);
         }else{

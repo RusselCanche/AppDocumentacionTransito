@@ -12,19 +12,19 @@
         android:layout_height="wrap_content"
         android:text="Iniciar Sesion" />
 
-    <TextView
-        android:id="@+id/textView"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Usuario/Correo" />
+        android:hint="Usuario">
 
-    <EditText
-        android:id="@+id/edit_usuario_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Usuario"
-        android:inputType="textPersonName" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_usuario_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView2"
@@ -32,13 +32,19 @@
         android:layout_height="wrap_content"
         android:text="Contraseña" />
 
-    <EditText
-        android:id="@+id/edit_contrasenia_login"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+        android:hint="Contraseña">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_contrasenia_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
