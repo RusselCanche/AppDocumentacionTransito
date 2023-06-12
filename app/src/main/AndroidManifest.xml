@@ -23,13 +23,13 @@
             android:name=".ListadoMultasUsuarioActivity"
             android:exported="false" />
         <activity
+            android:name=".ListadoMultasActivity"
+            android:exported="false" />
+        <activity
             android:name=".DatosTipoMultaActivity"
             android:exported="false" />
         <activity
             android:name=".RegistrarTipoMultaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ListadoMultasActivity"
             android:exported="false" />
         <activity
             android:name=".MiPerfilActivity"
