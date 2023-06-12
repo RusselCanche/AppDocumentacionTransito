@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -30,90 +28,141 @@
             android:layout_width="89dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/color1"
             android:onClick="modificar"
             android:text="Actualizar" />
     </LinearLayout>
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CURP" />
-
-    <EditText
-        android:id="@+id/edit_curp_mp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="CURP"
-        android:inputType="textPersonName" />
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <TextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_curp_mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre" />
-
-    <EditText
-        android:id="@+id/edit_nombre_mp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="Nombre"
-        android:inputType="textPersonName" />
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_nombre_mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Apellido paterno" />
+        android:hint="Apellido Paterno"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edit_paterno_mp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Paterno"
-        android:inputType="textPersonName" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_paterno_mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Apellido materno" />
+        android:hint="Apellido Materno"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edit_materno_mp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Materno"
-        android:inputType="textPersonName" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_materno_mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textView71"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fecha de nacimiento" />
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:text="Fecha de nacimiento"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <EditText
-            android:id="@+id/edit_fecha_nac_mp"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textView7"
             android:layout_width="308dp"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="yyyy-mm-dd"
-            android:inputType="textPersonName" />
-        <ImageButton
+            android:textColorHint="@color/color2"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_fecha_nac_mp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
             android:id="@+id/btnFechaMp"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/btn_icon"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:backgroundTint="@color/color2"
+            android:gravity="center_horizontal|top"
             android:onClick="muestraCalendarioFnacMp"
-            app:srcCompat="@drawable/baseline_calendar_month_24" />
+            app:icon="@drawable/baseline_calendar_month_24"
+            app:iconSize="40dp" />
     </LinearLayout>
     <DatePicker
         android:id="@+id/dpFechaMp"
@@ -127,80 +176,125 @@
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sexo" />
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:text="Sexo"
+        android:textColor="@color/color11"
+        android:textSize="@dimen/etiquetas_form" />
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
 
         <RadioButton
             android:id="@+id/radio_masculino_mp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Masculino" />
+            android:text="Masculino"
+            android:layout_marginHorizontal="20sp"
+            android:buttonTint="@color/color11"/>
 
         <RadioButton
             android:id="@+id/radio_femenino_mp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Femenino" />
+            android:text="Femenino"
+            android:layout_marginHorizontal="20sp"
+            android:buttonTint="@color/color11"/>
 
     </RadioGroup>
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Telefono" />
+        android:hint="Telefono"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edit_telefono_mp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_telefono_mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            />
 
-    <TextView
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Domicilio" />
+        android:hint="Domicilio"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edit_direccion_mp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Direccion"
-        android:inputType="textPersonName" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_direccion_mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
-    <TextView
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Usuario" />
+        android:hint="Usuario"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edit_usuario_mp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="usuario"
-        android:inputType="textPersonName" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_usuario_mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
-    <TextView
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contraseña" />
+        android:hint="Contraseña"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edit_contrasenia_mp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_contrasenia_mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>
 </ScrollView>

@@ -17,21 +17,22 @@ import com.example.appdocumentaciontransito.modelo.Propietario;
 import com.example.appdocumentaciontransito.modelo.Usuario;
 import com.example.appdocumentaciontransito.tablas.PropietarioController;
 import com.example.appdocumentaciontransito.tablas.UsuarioController;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class MiPerfilActivity extends AppCompatActivity {
-    private EditText curp;
-    private EditText nombre;
-    private EditText paterno;
-    private EditText materno;
+    private TextInputEditText curp;
+    private TextInputEditText nombre;
+    private TextInputEditText paterno;
+    private TextInputEditText materno;
     private DatePicker dpFecha;
     private ImageButton btnFecha;
-    private EditText txtFecha;
+    private TextInputEditText txtFecha;
     private RadioButton masculino;
     private RadioButton femenino;
-    private EditText telefono;
-    private EditText domicilio;
-    private EditText user;
-    private EditText contrasenia;
+    private TextInputEditText telefono;
+    private TextInputEditText domicilio;
+    private TextInputEditText user;
+    private TextInputEditText contrasenia;
     private PropietarioController propietarioController;
     private UsuarioController usuarioController;
 
@@ -53,7 +54,7 @@ public class MiPerfilActivity extends AppCompatActivity {
         materno = findViewById(R.id.edit_materno_mp);
         paterno = findViewById(R.id.edit_paterno_mp);
         dpFecha = (DatePicker) findViewById(R.id.dpFechaMp);
-        txtFecha = (EditText) findViewById(R.id.edit_fecha_nac_mp);
+        txtFecha = (TextInputEditText) findViewById(R.id.edit_fecha_nac_mp);
         masculino = findViewById(R.id.radio_masculino_mp);
         femenino = findViewById(R.id.radio_femenino_mp);
         telefono = findViewById(R.id.edit_telefono_mp);
