@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistrarMultaActivity">
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTRAR MULTA" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de multa" />
+
+    <Spinner
+        android:id="@+id/sp_tipos_multa_registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Monto" />
+
+    <EditText
+        android:id="@+id/edit_monto_multa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha multa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/edit_fecha_multa"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="yyyy-mm-dd"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/btnFechaMulta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="muestraCalendarioFnacUsuario"
+            app:srcCompat="@drawable/baseline_calendar_month_24" />
+    </LinearLayout>
+    <DatePicker
+        android:id="@+id/dpFechaMulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:visibility="gone"></DatePicker>
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha límite de pago" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/edit_fecha_limite"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="yyyy-mm-dd"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/btnFechaLimite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="muestraCalendarioFnacUsuario"
+            app:srcCompat="@drawable/baseline_calendar_month_24" />
+    </LinearLayout>
+    <DatePicker
+        android:id="@+id/dpFechaLimite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:visibility="gone"></DatePicker>
+
+    <TextView
+        android:id="@+id/textView64"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Municipio" />
+
+    <EditText
+        android:id="@+id/edit_municipio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar" />
+</LinearLayout>

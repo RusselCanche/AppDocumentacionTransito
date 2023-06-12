@@ -22,7 +22,7 @@ public class ListadoMultasActivity extends AppCompatActivity {
     private ListView lvTiposMultas;
     private TablaTipoMulta tablaTipoMulta;
     private ArrayList<String> tiposMultas;
-
+    private List<TipoMultaEstado> multas;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class ListadoMultasActivity extends AppCompatActivity {
         lvTiposMultas = findViewById(R.id.lv_tipos_multas);
         tablaTipoMulta = new TablaTipoMulta(this);
         tiposMultas = new ArrayList<>();
-        List<TipoMultaEstado> multas = tablaTipoMulta.obtenerTiposMulta();
+        multas = tablaTipoMulta.obtenerTiposMulta();
 
 
         for(TipoMultaEstado tipoMulta : multas){
@@ -48,8 +48,15 @@ public class ListadoMultasActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), DatosTipoMultaActivity.class);
                 intent.putExtra("id", ""+multas.get(i).getId());
                 startActivity(intent);
+                onPause();
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        multas = tablaTipoMulta.obtenerTiposMulta();
     }
 
     public void onRegistrarTipoMulta(View view){
