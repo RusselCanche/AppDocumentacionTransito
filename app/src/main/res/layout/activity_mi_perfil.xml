@@ -113,13 +113,11 @@
         app:boxCornerRadiusBottomStart="10dp"
         android:layout_margin="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_materno_mp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
