@@ -25,9 +25,9 @@ public class TablaTipoMulta {
         bd = bdSQLite.getWritableDatabase();
     }
 
-    public Cursor mostrarTiposMultas(){
+    public Cursor mostrarTiposMultas(String estado){
         try {
-            fila = bd.rawQuery("SELECT * FROM tipo_multa_estado", null);
+            fila = bd.rawQuery("SELECT * FROM tipo_multa_estado WHERE estado='"+estado+"'", null);
             if(fila.moveToFirst()){
                 return fila;
             } else {

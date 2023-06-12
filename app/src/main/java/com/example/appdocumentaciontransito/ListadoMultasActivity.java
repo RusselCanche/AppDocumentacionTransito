@@ -57,8 +57,8 @@ public class ListadoMultasActivity extends AppCompatActivity {
 
     }
 
-    public void onRegistrarMulta(View view){
-        Intent intento = new Intent(this, RegistrarMultaActivity.class);
+    public void onRegistrarTipoMulta(View view){
+        Intent intento = new Intent(this, RegistrarTipoMultaActivity.class);
         startActivity(intento);
     }
 }

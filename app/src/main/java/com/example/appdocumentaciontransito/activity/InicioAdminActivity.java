@@ -7,12 +7,9 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 
-import com.example.appdocumentaciontransito.ListadoLicenciasActivity;
 import com.example.appdocumentaciontransito.ListadoMultasActivity;
-import com.example.appdocumentaciontransito.ListadoVehiculosActivity;
 import com.example.appdocumentaciontransito.MiPerfilActivity;
 import com.example.appdocumentaciontransito.R;
-import com.example.appdocumentaciontransito.RegistroUsuarioActivity;
 import com.example.appdocumentaciontransito.databinding.ActivityInicioAdminBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
