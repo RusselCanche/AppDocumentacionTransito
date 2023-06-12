@@ -1,14 +1,18 @@
 package com.example.appdocumentaciontransito.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.example.appdocumentaciontransito.R;
 import com.example.appdocumentaciontransito.databinding.ActivityInicioUsuarioBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -56,7 +60,21 @@ public class InicioUsuarioActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.inicio_usuario, menu);
         return true;
     }
-
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_logout:
+                this.logout();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    public void logout() {
+        Toast.makeText(getApplicationContext(), "Cerraste sesion", Toast.LENGTH_LONG).show();
+        finish();
+        Intent intento = new Intent(this, MainActivity.class);
+        startActivity(intento);
+    }
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_inicio_usuario);

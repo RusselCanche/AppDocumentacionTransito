@@ -1,14 +1,18 @@
 package com.example.appdocumentaciontransito.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.example.appdocumentaciontransito.R;
 import com.example.appdocumentaciontransito.databinding.ActivityInicioAdminBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -55,6 +59,23 @@ public class InicioAdminActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.inicio_admin, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_logout:
+                this.logout();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void logout() {
+        Toast.makeText(getApplicationContext(), "Cerraste sesion", Toast.LENGTH_LONG).show();
+        finish();
+        Intent intento = new Intent(this, MainActivity.class);
+        startActivity(intento);
     }
 
     @Override
