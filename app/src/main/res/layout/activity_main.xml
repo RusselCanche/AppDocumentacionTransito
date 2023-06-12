@@ -8,15 +8,32 @@
     tools:context=".activity.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Iniciar Sesion" />
+        android:gravity="center"
+        android:text="Iniciar Sesion"
+        android:textSize="@dimen/title_login" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="335dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/vehicular" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Usuario">
+        android:hint="Usuario"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_usuario_login"
@@ -26,17 +43,19 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Contraseña" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contraseña">
+        android:hint="Contraseña"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_contrasenia_login"
@@ -45,10 +64,12 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/color1"
         android:onClick="onIniciarSesion"
         android:text="Iniciar Sesion" />
 
@@ -56,6 +77,7 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/color2"
         android:onClick="onRegistroUsuario"
         android:text="Soy nuevo, quiero registrarme" />
 
