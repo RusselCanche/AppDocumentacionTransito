@@ -8,41 +8,68 @@
     tools:context=".activity.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Sesion" />
-
-    <TextView
-        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Usuario/Correo" />
+        android:gravity="center"
+        android:text="Iniciar Sesion"
+        android:textSize="@dimen/title_login" />
 
-    <EditText
-        android:id="@+id/edit_usuario_login"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="335dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/vehicular" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="Usuario"
-        android:inputType="textPersonName" />
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <TextView
-        android:id="@+id/textView2"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_usuario_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contraseña" />
+        android:hint="Contraseña"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edit_contrasenia_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_contrasenia_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/color1"
         android:onClick="onIniciarSesion"
         android:text="Iniciar Sesion" />
 
@@ -50,6 +77,7 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/color2"
         android:onClick="onRegistroUsuario"
         android:text="Soy nuevo, quiero registrarme" />
 
