@@ -8,7 +8,7 @@
     <dimen name="title_login">34dp</dimen>
     <dimen name="etiquetas_form">20dp</dimen>
 
-
+    <dimen name="title_form">34dp</dimen>
     <dimen name="pd_etiquetas_form">15sp</dimen>
     <dimen name="btn_icon">73dp</dimen>
     <dimen name="icon_size_form">40dp</dimen>
