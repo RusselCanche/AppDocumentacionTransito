@@ -54,6 +54,19 @@ public class PropietarioController {
         bd.insert("propietario", null, registro);
     }
 
+    public int modificar(Propietario propietario){
+        ContentValues registro = new ContentValues();
+        registro.put("curp", propietario.getCurp());
+        registro.put("nombre", propietario.getNombre());
+        registro.put("paterno", propietario.getPaterno());
+        registro.put("materno", propietario.getMaterno());
+        registro.put("fecha_nacimiento", propietario.getFechaNacimiento());
+        registro.put("sexo", propietario.getSexo());
+        registro.put("telefono", propietario.getTelefono());
+        registro.put("domicilio", propietario.getDomicilio());
+        return bd.update("propietario", registro, "curp='" + propietario.getCurp() +"'", null);
+    }
+
     public Propietario getPropietario(String curp){
         Propietario propietario = new Propietario();
         Cursor fila = bd.rawQuery("select * from propietario where curp = '"+curp+"'",null);

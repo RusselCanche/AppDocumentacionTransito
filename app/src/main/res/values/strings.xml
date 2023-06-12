@@ -17,5 +17,49 @@
     <string name="menu_mis_multas">Mis multas</string>
     <string name="title_activity_inicio_usuario">InicioUsuarioActivity</string>
 
+    <string-array name="estados_array">
+        <item>Aguascalientes - AS</item>
+        <item>Baja California - BC</item>
+        <item>Baja California Sur - BS</item>
+        <item>Campeche - CC</item>
+        <item>Chiapas - CS</item>
+        <item>Chihuahua - CH</item>
+        <item>Ciudad de Mexico - DF</item>
+        <item>Coahuila - CL</item>
+        <item>Colima - CM</item>
+        <item>Durango - DG</item>
+        <item>Guanajuato - GT</item>
+        <item>Guerrero - GR</item>
+        <item>Hidalgo - HG</item>
+        <item>Jalisco - JC</item>
+        <item>Estado de Mexico - MC</item>
+        <item>Michoacan - MN</item>
+        <item>Morelos - MS</item>
+        <item>Nayarit - NT</item>
+        <item>Nuevo Leon - NL</item>
+        <item>Oaxaca - OC</item>
+        <item>Puebla - PL</item>
+        <item>Queretaro - QO</item>
+        <item>Quintana Roo - QR</item>
+        <item>San Luis Potosi - SP</item>
+        <item>Sinaloa - SL</item>
+        <item>Sonora - SR</item>
+        <item>Tabasco - TC</item>
+        <item>Tamaulipas - TS</item>
+        <item>Tlaxcala - TL</item>
+        <item>Veracruz - VZ</item>
+        <item>Yucatan - YN</item>
+        <item>Zacatecas - ZS</item>
+    </string-array>
+
+    <string-array name="infracciones_array">
+        <item>Portar licencia para conducir vencida</item>
+        <item>No portar licencia para conducir</item>
+        <item>Conducir sin tipo de licencia apropiada</item>
+        <item>Circular sin portar placas</item>
+        <item>No cumple con el proceso de verificación vehicular</item>
+        <item>Conducir sin tarjeta de circulación</item>
+    </string-array>
+
     <string name="action_logout">Cerrar Sesion</string>
 </resources>
