@@ -23,16 +23,23 @@ public class ListadoVehiculosActivity extends AppCompatActivity {
     private ListView lvVehiculos;
     private TablaVehiculo tablaVehiculo;
     private ArrayList<String> vehiculos;
-
+    private SharedPreferences preferences;
+    private ArrayAdapter<String> adapter;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_vehiculos);
 
-        SharedPreferences preferences = getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        preferences = getSharedPreferences("sesion", Context.MODE_PRIVATE);
         tablaVehiculo = new TablaVehiculo(this);
         lvVehiculos = findViewById(R.id.lv_vehiculos_propietario);
+
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+
         vehiculos = new ArrayList<>();
         String curp = preferences.getString("curp_usuario", "");
 
@@ -40,7 +47,7 @@ public class ListadoVehiculosActivity extends AppCompatActivity {
             vehiculos.add(vehiculo.getNumeroSerie() + "\t\t\t\t/ " + vehiculo.getTipo() + "\t\t\t\t/ " + vehiculo.getMarca()+" - "+vehiculo.getModelo());
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, vehiculos);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, vehiculos);
         lvVehiculos.setAdapter(adapter);
 
         lvVehiculos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -52,7 +59,6 @@ public class ListadoVehiculosActivity extends AppCompatActivity {
             }
         });
     }
-
     public void onRegistrarVehiculo(View view){
         Intent intento = new Intent(this, RegistrarVehiculoActivity.class);
         startActivity(intento);
