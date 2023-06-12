@@ -28,6 +28,38 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.AppDocumentacionTransito.Admin" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color11</item>
+        <item name="colorPrimaryVariant">@color/color12</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color13</item>
+        <item name="colorSecondaryVariant">@color/color13</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/color11</item>
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AppDocumentacionTransito.Usuario" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color1</item>
+        <item name="colorPrimaryVariant">@color/color2</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color3</item>
+        <item name="colorSecondaryVariant">@color/color3</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/color1</item>
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="Theme.AppDocumentacionTransito.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
