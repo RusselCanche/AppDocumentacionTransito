@@ -25,6 +25,19 @@ public class TablaTipoMulta {
         bd = bdSQLite.getWritableDatabase();
     }
 
+    public Cursor mostrarTiposMultas(){
+        try {
+            fila = bd.rawQuery("SELECT * FROM tipo_multa_estado", null);
+            if(fila.moveToFirst()){
+                return fila;
+            } else {
+                return null;
+            }
+        } catch (Exception ex){
+            return null;
+        }
+    }
+
     public boolean existe(String numero){
         fila = bd.rawQuery("SELECT * FROM tipo_multa_estado WHERE id='" +numero+"'", null);
         if (fila.moveToFirst()) {

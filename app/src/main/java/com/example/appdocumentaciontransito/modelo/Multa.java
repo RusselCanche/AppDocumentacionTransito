@@ -1,16 +1,17 @@
 package com.example.appdocumentaciontransito.modelo;
 
 public class Multa {
-    private String id;
+    private int id;
     private String fechaMulta;
     private String fechaLimite;
     private String montoMulta;
     private String municipio;
     private String status;
-    private String multaEstadoId;
+    private int multaEstadoId;
+    private String curp;
 
     public Multa(){super();}
-    public Multa(String id, String fechaMulta, String fechaLimite, String montoMulta, String municipio, String status, String multaEstadoId) {
+    public Multa(int id, String fechaMulta, String fechaLimite, String montoMulta, String municipio, String status, int multaEstadoId) {
         this.id = id;
         this.fechaMulta = fechaMulta;
         this.fechaLimite = fechaLimite;
@@ -20,11 +21,11 @@ public class Multa {
         this.multaEstadoId = multaEstadoId;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -68,12 +69,20 @@ public class Multa {
         this.status = status;
     }
 
-    public String getMultaEstadoId() {
+    public int getMultaEstadoId() {
         return multaEstadoId;
     }
 
-    public void setMultaEstadoId(String multaEstadoId) {
+    public void setMultaEstadoId(int multaEstadoId) {
         this.multaEstadoId = multaEstadoId;
+    }
+
+    public String getCurp() {
+        return curp;
+    }
+
+    public void setCurp(String curp) {
+        this.curp = curp;
     }
 
     @Override
