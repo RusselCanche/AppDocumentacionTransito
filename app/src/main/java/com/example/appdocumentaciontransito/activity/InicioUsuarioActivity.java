@@ -15,6 +15,7 @@ import com.example.appdocumentaciontransito.MiPerfilActivity;
 import com.example.appdocumentaciontransito.R;
 import com.example.appdocumentaciontransito.RegistroUsuarioActivity;
 import com.example.appdocumentaciontransito.databinding.ActivityInicioUsuarioBinding;
+import com.example.appdocumentaciontransito.tablas.PropietarioController;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -29,7 +30,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class InicioUsuarioActivity extends AppCompatActivity {
-
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityInicioUsuarioBinding binding;
 

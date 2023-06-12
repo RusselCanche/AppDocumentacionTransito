@@ -35,7 +35,6 @@ public class PropietarioController {
         if (fila.moveToFirst()) {
             do {
                 propietarios.add(new Propietario(fila.getString(0),fila.getString(1),fila.getString(2),fila.getString(3),fila.getString(4),fila.getString(5),fila.getString(6),fila.getString(7)));
-                // Do something Here with values
             } while(fila.moveToNext());
         }
         return propietarios;
@@ -100,6 +99,14 @@ public class PropietarioController {
     public void actualizarCursor(){
         fila.close();
         fila = bd.rawQuery("SELECT * FROM propietario", null);
+    }
+
+    public boolean tieneLicencia(String curp){
+        fila = bd.rawQuery("SELECT * FROM propietario join licencia on licencia.curp_propietario = propietario.curp WHERE curp='" + curp +"'", null);
+        if (fila.moveToFirst()) {
+            return true;
+        }
+        return false;
     }
 
     public void cerrar(){
