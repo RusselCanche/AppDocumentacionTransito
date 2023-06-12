@@ -20,15 +20,22 @@ public class ListadoLicenciasActivity extends AppCompatActivity {
     private ListView lvLicencias;
     private TablaLicencia tablaLicencia;
     private ArrayList<String> licencias;
-
+    private SharedPreferences preferences;
+    private ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_licencias);
 
-        SharedPreferences preferences = getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        preferences = getSharedPreferences("sesion", Context.MODE_PRIVATE);
         tablaLicencia = new TablaLicencia(this);
         lvLicencias = findViewById(R.id.lv_licencias_usuario);
+
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        // put your code here...
         licencias = new ArrayList<>();
         String curp = preferences.getString("curp_usuario", "");
 
@@ -36,7 +43,7 @@ public class ListadoLicenciasActivity extends AppCompatActivity {
             licencias.add(licencia.getNumeroLicencia() + "\t\t\t\t/ " + licencia.getTipo() + "\t\t\t\t/ " + licencia.getEstadoEmision());
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, licencias);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, licencias);
         lvLicencias.setAdapter(adapter);
 
         lvLicencias.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -48,7 +55,6 @@ public class ListadoLicenciasActivity extends AppCompatActivity {
             }
         });
     }
-
     public void onRegistrarLicencia(View view){
         Intent intento = new Intent(this, RegistrarLicenciaActivity.class);
         startActivity(intento);

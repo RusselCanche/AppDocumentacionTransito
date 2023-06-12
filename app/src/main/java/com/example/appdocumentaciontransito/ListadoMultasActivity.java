@@ -22,7 +22,9 @@ public class ListadoMultasActivity extends AppCompatActivity {
     private ListView lvTiposMultas;
     private TablaTipoMulta tablaTipoMulta;
     private ArrayList<String> tiposMultas;
+    private List<TipoMultaEstado> multas;
 
+    private ArrayAdapter<String> adapter;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +33,19 @@ public class ListadoMultasActivity extends AppCompatActivity {
 
         lvTiposMultas = findViewById(R.id.lv_tipos_multas);
         tablaTipoMulta = new TablaTipoMulta(this);
+
+
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        // put your code here...
         tiposMultas = new ArrayList<>();
-        List<TipoMultaEstado> multas = tablaTipoMulta.obtenerTiposMulta();
-
-
+        multas = tablaTipoMulta.obtenerTiposMulta();
         for(TipoMultaEstado tipoMulta : multas){
             tiposMultas.add(tipoMulta.getTipoMulta() + "\t\t\t\t\t\t\t/ " + tipoMulta.getEstado());
         }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tiposMultas);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tiposMultas);
         lvTiposMultas.setAdapter(adapter);
 
         lvTiposMultas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -50,6 +56,7 @@ public class ListadoMultasActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
     public void onRegistrarTipoMulta(View view){

@@ -123,7 +123,7 @@ public class MiPerfilActivity extends AppCompatActivity {
         return anio + "-" + mes + "-" + dia;
     }
 
-    private void muestraCalendario(View view){
+    public void muestraCalendarioFnacMp(View view){
         if(dpFecha.getVisibility() == View.VISIBLE){
             dpFecha.setVisibility(View.GONE);
         }else{
