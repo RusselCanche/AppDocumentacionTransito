@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.widget.Toast;
 
 import com.example.appdocumentaciontransito.ListadoLicenciasActivity;
+import com.example.appdocumentaciontransito.ListadoMultasActivity;
 import com.example.appdocumentaciontransito.ListadoVehiculosActivity;
 import com.example.appdocumentaciontransito.MiPerfilActivity;
 import com.example.appdocumentaciontransito.R;
@@ -82,7 +83,7 @@ public class InicioUsuarioActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case R.id.nav_mis_multas:
-                        intent = new Intent(InicioUsuarioActivity.this, MiPerfilActivity.class);
+                        intent = new Intent(InicioUsuarioActivity.this, ListadoMultasActivity.class);
                         startActivity(intent);
                         break;
                 }

@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.widget.Toast;
 
 import com.example.appdocumentaciontransito.ListadoLicenciasActivity;
+import com.example.appdocumentaciontransito.ListadoMultasActivity;
 import com.example.appdocumentaciontransito.ListadoVehiculosActivity;
 import com.example.appdocumentaciontransito.MiPerfilActivity;
 import com.example.appdocumentaciontransito.R;
@@ -74,16 +75,13 @@ public class InicioAdminActivity extends AppCompatActivity {
                         intent = new Intent(InicioAdminActivity.this, MiPerfilActivity.class);
                         startActivity(intent);
                         break;
-                    case R.id.nav_mis_licencias:
-                        intent = new Intent(InicioAdminActivity.this, ListadoLicenciasActivity.class);
-                        startActivity(intent);
+                    case R.id.nav_usuarios:
+                        Toast.makeText(getApplicationContext(), "PENDIENTE USUARIOS", Toast.LENGTH_SHORT).show();
+                        //intent = new Intent(InicioAdminActivity.this, ListadoLicenciasActivity.class);
+                        //startActivity(intent);
                         break;
-                    case R.id.nav_mis_vehiculos:
-                        intent = new Intent(InicioAdminActivity.this, ListadoVehiculosActivity.class);
-                        startActivity(intent);
-                        break;
-                    case R.id.nav_mis_multas:
-                        intent = new Intent(InicioAdminActivity.this, MiPerfilActivity.class);
+                    case R.id.nav_multas:
+                        intent = new Intent(InicioAdminActivity.this, ListadoMultasActivity.class);
                         startActivity(intent);
                         break;
                 }
