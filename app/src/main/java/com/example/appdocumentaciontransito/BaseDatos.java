@@ -20,6 +20,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL("create table licencia(numero_licencia text primary key, tipo text, fecha_emision text, fecha_expiracion text, estado_emision text, imagen_licencia text, curp_propietario text, foreign key(curp_propietario) references propietario(curp))");
         db.execSQL("create table vehiculo(numero_serie text primary key, numero_placas text, marca text, modelo text, anio text, tipo text, numero_motor text, curp_propietario text, foreign key(curp_propietario) references propietario(curp))");
         db.execSQL("create table tarjeta_circulacion(numero_serie_tarjeta text primary key, fecha_emision text, fecha_expiracion text, estado_emision text, imagen_tarjeta text, numero_serie_vehiculo text, foreign key(numero_serie_vehiculo) references vehiculo(numero_serie))");
+        db.execSQL("create table verificacion_vehicular(numero_verificacion text PRIMARY KEY, tipo_combustible text, resultado text, fecha_verificacion text, fecha_proxima_verificacion text, certificado_verificacion text, numero_serie_vehiculo text, foreign key(numero_serie_vehiculo) references vehiculo(numero_serie))");
         db.execSQL("CREATE TABLE estado(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre text)");
         db.execSQL("CREATE TABLE tipo_multa(id INTEGER PRIMARY KEY AUTOINCREMENT, tipo text)");
         /* SEGÚN EL ESTADO MOSTRAR UN COMBOBOX CON LAS DIFERENTES MULTAS */
@@ -34,6 +35,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS licencia");
         db.execSQL("DROP TABLE IF EXISTS vehiculo");
         db.execSQL("DROP TABLE IF EXISTS tarjeta_circulacion");
+        db.execSQL("DROP TABLE IF EXISTS verificacion_vehicular");
         db.execSQL("DROP TABLE IF EXISTS estado");
         db.execSQL("DROP TABLE IF EXISTS tipo_multa");
         db.execSQL("DROP TABLE IF EXISTS tipo_multa_estado");

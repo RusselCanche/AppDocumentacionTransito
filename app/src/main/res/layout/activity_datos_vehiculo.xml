@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatosVehiculoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:text="DATOS DEL VEHICULO"
+                    android:textColor="@color/purple_700"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btn_verificacion_vehicular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onRegistrarVerificacion"
+                    android:text="V. Vehicular"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Número de serie" />
+
+            <EditText
+                android:id="@+id/edit_numero_serie_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Número de placas" />
+
+            <EditText
+                android:id="@+id/edit_numero_placas_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marca" />
+
+            <EditText
+                android:id="@+id/edit_marca_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modelo" />
+
+            <EditText
+                android:id="@+id/edit_modelo_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Año" />
+
+            <EditText
+                android:id="@+id/edit_anio_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo" />
+
+            <EditText
+                android:id="@+id/edit_tipo_vehiculo_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Número de motor" />
+
+            <EditText
+                android:id="@+id/edit_numero_motor_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarjeta de circulación"
+                android:textColor="@color/purple_700"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Número de serie (tarjeta)" />
+
+            <EditText
+                android:id="@+id/edit_numero_tarjeta_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha de emisión" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_fecha_emision_circulacion_cons"
+                    android:layout_width="308dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="yyyy-mm-dd"
+                    android:inputType="textPersonName" />
+
+                <ImageButton
+                    android:id="@+id/btnFechaEmisionCirculacionCons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="muestraCalendario"
+                    app:srcCompat="@drawable/baseline_calendar_month_24" />
+            </LinearLayout>
+
+            <DatePicker
+                android:id="@+id/dpFechaEmisionCirculacionCons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></DatePicker>
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha de expiración" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_fecha_expiracion_circulacion_cons"
+                    android:layout_width="308dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="yyyy-mm-dd"
+                    android:inputType="textPersonName" />
+
+                <ImageButton
+                    android:id="@+id/btnFechaExpiracionCirculacionCons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="muestraCalendario"
+                    app:srcCompat="@drawable/baseline_calendar_month_24" />
+            </LinearLayout>
+
+            <DatePicker
+                android:id="@+id/dpFechaExpiracionCirculacionCons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></DatePicker>
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estado de emisión" />
+
+            <EditText
+                android:id="@+id/edit_estado_tarjeta_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Imagen de la tarjeta de circulación" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_url_tarjeta_cons"
+                    android:layout_width="254dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_buscar_img_tarjeta_cons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/baseline_calendar_month_24" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image_tarjeta_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verificación vehicular"
+                android:textColor="@color/purple_700"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Folio"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit_folio_verificacion_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de combustible"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit_tipo_combustible_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resultado"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit_resultado_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha de verificación"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/edit_fecha_verificacion_cons"
+                    android:layout_width="308dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="yyyy-mm-dd"
+                    android:inputType="textPersonName"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btnFechaVerificacionCons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="muestraCalendario"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/baseline_calendar_month_24" />
+            </LinearLayout>
+
+            <DatePicker
+                android:id="@+id/dpFechaVerificacionCons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></DatePicker>
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Próxima fecha de verificación"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/edit_proxima_fecha_verificacion_cons"
+                    android:layout_width="308dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="yyyy-mm-dd"
+                    android:inputType="textPersonName"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btnProximaFechaVerificacionCons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="muestraCalendario"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/baseline_calendar_month_24" />
+            </LinearLayout>
+
+            <DatePicker
+                android:id="@+id/dpProximaFechaVerificacionCons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></DatePicker>
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Imagen del certificado de verificación"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_url_verificacion_cons"
+                    android:layout_width="254dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btn_buscar_img_verificacion_cons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/baseline_calendar_month_24" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image_verificacion_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/button13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="modificar"
+                    android:text="Actualizar" />
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/design_default_color_error"
+                    android:onClick="eliminar"
+                    android:text="Eliminar" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

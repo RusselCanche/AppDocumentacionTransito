@@ -12,7 +12,4 @@ public class Utileria {
         return anio + "-" + mes + "-" + dia;
     }
 
-    public static void muestraCalendario(View view, DatePicker dpFecha){
-        dpFecha.setVisibility(View.VISIBLE);
-    }
 }

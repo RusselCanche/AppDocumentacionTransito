@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistrarVerificacionActivity">
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTRAR V. VEHICULAR"
+        android:textColor="@color/purple_700"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Folio" />
+
+    <EditText
+        android:id="@+id/edit_folio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Folio"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de combustible" />
+
+    <EditText
+        android:id="@+id/edit_tipo_combustible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tipo de combustible"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado" />
+
+    <EditText
+        android:id="@+id/edit_resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Aprobado/No Aprobado"
+        android:inputType="textPersonName"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha de verificación"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/edit_fecha_verificacion"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="yyyy-mm-dd"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/btnFechaVerificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="muestraCalendario"
+            app:srcCompat="@drawable/baseline_calendar_month_24" />
+    </LinearLayout>
+
+    <DatePicker
+        android:id="@+id/dpFechaVerificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"></DatePicker>
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Próxima fecha de verificación"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/edit_proxima_fecha_verificacion"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="yyyy-mm-dd"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/btnProximaFechaVerificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="muestraCalendario"
+            app:srcCompat="@drawable/baseline_calendar_month_24" />
+    </LinearLayout>
+
+    <DatePicker
+        android:id="@+id/dpProximaFechaVerificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"></DatePicker>
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Imagen del certificado de verificación"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_url_verificacion"
+            android:layout_width="254dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btn_buscar_img_verificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_calendar_month_24" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_verificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="guardar"
+        android:text="Guardar" />
+</LinearLayout>
