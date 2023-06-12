@@ -29,8 +29,16 @@
         <activity
             android:name=".DatosLicenciaActivity"
             android:exported="false" />
+        <activity android:name=".DatosVehiculoActivity"
+            android:exported="false"/>
         <activity
             android:name=".RegistrarLicenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarVehiculoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarVerificacionActivity"
             android:exported="false" />
         <activity
             android:name=".ListadoVehiculosActivity"
@@ -46,15 +54,6 @@
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
-            android:exported="true"/>
-        <activity
-            android:name=".DatosVehiculoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegistrarVehiculoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegistrarVerificacionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
