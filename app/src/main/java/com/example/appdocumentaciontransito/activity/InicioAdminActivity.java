@@ -1,14 +1,23 @@
 package com.example.appdocumentaciontransito.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
+import com.example.appdocumentaciontransito.ListadoLicenciasActivity;
+import com.example.appdocumentaciontransito.ListadoVehiculosActivity;
+import com.example.appdocumentaciontransito.MiPerfilActivity;
 import com.example.appdocumentaciontransito.R;
+import com.example.appdocumentaciontransito.RegistroUsuarioActivity;
 import com.example.appdocumentaciontransito.databinding.ActivityInicioAdminBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -48,6 +57,42 @@ public class InicioAdminActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_inicio_admin);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        // Agregar listener al NavigationView
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // Identificar la opción seleccionada
+                int id = item.getItemId();
+                Intent intent=null;
+                // Manejar la acción correspondiente
+                switch (id) {
+                    case R.id.nav_home:
+                        Toast.makeText(getApplicationContext(), "HOME", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_mi_perfil:
+                        intent = new Intent(InicioAdminActivity.this, MiPerfilActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_mis_licencias:
+                        intent = new Intent(InicioAdminActivity.this, ListadoLicenciasActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_mis_vehiculos:
+                        intent = new Intent(InicioAdminActivity.this, ListadoVehiculosActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_mis_multas:
+                        intent = new Intent(InicioAdminActivity.this, MiPerfilActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+
+                // Cerrar el DrawerLayout después de seleccionar una opción
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
     }
 
     @Override
@@ -55,6 +100,23 @@ public class InicioAdminActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.inicio_admin, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_logout:
+                this.logout();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void logout() {
+        Toast.makeText(getApplicationContext(), "Cerraste sesion", Toast.LENGTH_LONG).show();
+        finish();
+        Intent intento = new Intent(this, MainActivity.class);
+        startActivity(intento);
     }
 
     @Override

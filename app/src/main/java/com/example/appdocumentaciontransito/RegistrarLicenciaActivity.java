@@ -70,7 +70,7 @@ public class RegistrarLicenciaActivity extends AppCompatActivity {
             @Override
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
                 fechaEmision.setText(getFechaPicker(dpFechaEmision));
-                dpFechaEmision.setVisibility(View.GONE);
+                //dpFechaEmision.setVisibility(View.GONE);
             }
         });
 
@@ -79,7 +79,7 @@ public class RegistrarLicenciaActivity extends AppCompatActivity {
             @Override
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
                 fechaExpiracion.setText(getFechaPicker(dpFechaExpiracion));
-                dpFechaExpiracion.setVisibility(View.GONE);
+                //dpFechaExpiracion.setVisibility(View.GONE);
             }
         });
     }
@@ -163,5 +163,20 @@ public class RegistrarLicenciaActivity extends AppCompatActivity {
         tvURL.setText("");
         numeroLicencia.requestFocus();
         imageLicencia.setVisibility(View.GONE);
+    }
+
+    private void muestraCalendarioFem(View view){
+        if(dpFechaEmision.getVisibility() == View.VISIBLE){
+            dpFechaEmision.setVisibility(View.GONE);
+        }else{
+            dpFechaEmision.setVisibility(View.VISIBLE);
+        }
+    }
+    private void muestraCalendarioFex(View view){
+        if(dpFechaExpiracion.getVisibility() == View.VISIBLE){
+            dpFechaExpiracion.setVisibility(View.GONE);
+        }else{
+            dpFechaExpiracion.setVisibility(View.VISIBLE);
+        }
     }
 }

@@ -67,14 +67,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="muestraCalendario"
+            android:onClick="muestraCalendarioFem"
             app:srcCompat="@drawable/baseline_calendar_month_24" />
     </LinearLayout>
 
     <DatePicker
         android:id="@+id/dpFechaEmision"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
         android:visibility="gone"></DatePicker>
 
     <TextView
@@ -101,14 +103,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="muestraCalendario"
+            android:onClick="muestraCalendarioFex"
             app:srcCompat="@drawable/baseline_calendar_month_24" />
     </LinearLayout>
 
     <DatePicker
         android:id="@+id/dpFechaExpiracion"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
         android:visibility="gone"></DatePicker>
 
     <TextView
