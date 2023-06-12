@@ -20,38 +20,38 @@
     <string name="title_activity_inicio_usuario">InicioUsuarioActivity</string>
 
     <string-array name="estados_array">
-        <item>Aguascalientes - AS</item>
-        <item>Baja California - BC</item>
-        <item>Baja California Sur - BS</item>
-        <item>Campeche - CC</item>
-        <item>Chiapas - CS</item>
-        <item>Chihuahua - CH</item>
-        <item>Ciudad de Mexico - DF</item>
-        <item>Coahuila - CL</item>
-        <item>Colima - CM</item>
-        <item>Durango - DG</item>
-        <item>Guanajuato - GT</item>
-        <item>Guerrero - GR</item>
-        <item>Hidalgo - HG</item>
-        <item>Jalisco - JC</item>
-        <item>Estado de Mexico - MC</item>
-        <item>Michoacan - MN</item>
-        <item>Morelos - MS</item>
-        <item>Nayarit - NT</item>
-        <item>Nuevo Leon - NL</item>
-        <item>Oaxaca - OC</item>
-        <item>Puebla - PL</item>
-        <item>Queretaro - QO</item>
-        <item>Quintana Roo - QR</item>
-        <item>San Luis Potosi - SP</item>
-        <item>Sinaloa - SL</item>
-        <item>Sonora - SR</item>
-        <item>Tabasco - TC</item>
-        <item>Tamaulipas - TS</item>
-        <item>Tlaxcala - TL</item>
-        <item>Veracruz - VZ</item>
-        <item>Yucatan - YN</item>
-        <item>Zacatecas - ZS</item>
+        <item>Aguascalientes</item>
+        <item>Baja California</item>
+        <item>Baja California Sur</item>
+        <item>Campeche</item>
+        <item>Chiapas</item>
+        <item>Chihuahua</item>
+        <item>Ciudad de Mexico</item>
+        <item>Coahuila</item>
+        <item>Colima</item>
+        <item>Durango</item>
+        <item>Guanajuato</item>
+        <item>Guerrero</item>
+        <item>Hidalgo</item>
+        <item>Jalisco</item>
+        <item>Estado de México</item>
+        <item>Michoacán</item>
+        <item>Morelos</item>
+        <item>Nayarit</item>
+        <item>Nuevo León</item>
+        <item>Oaxaca</item>
+        <item>Puebla</item>
+        <item>Querétaro</item>
+        <item>Quintana Roo</item>
+        <item>San Luis Potosí</item>
+        <item>Sinaloa</item>
+        <item>Sonora</item>
+        <item>Tabasco</item>
+        <item>Tamaulipas</item>
+        <item>Tlaxcala</item>
+        <item>Veracruz</item>
+        <item>Yucatán</item>
+        <item>Zacatecas</item>
     </string-array>
 
     <string-array name="infracciones_array">

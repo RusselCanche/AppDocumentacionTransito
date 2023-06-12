@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.appdocumentaciontransito.BaseDatos;
+import com.example.appdocumentaciontransito.modelo.Licencia;
 import com.example.appdocumentaciontransito.modelo.TipoMultaEstado;
 import com.example.appdocumentaciontransito.modelo.Vehiculo;
 
@@ -24,6 +25,14 @@ public class TablaTipoMulta {
         bd = bdSQLite.getWritableDatabase();
     }
 
+    public boolean existe(String numero){
+        fila = bd.rawQuery("SELECT * FROM tipo_multa_estado WHERE id='" +numero+"'", null);
+        if (fila.moveToFirst()) {
+            return true;
+        }
+        return false;
+    }
+
     public void guardar(TipoMultaEstado tipoMulta){
         ContentValues registro = new ContentValues();
         //registro.put("id", tipoMulta.getId());
@@ -34,7 +43,28 @@ public class TablaTipoMulta {
 
         bd.insert("tipo_multa_estado", null, registro);
     }
+    public int modificar(TipoMultaEstado tipoMulta){
+        ContentValues registro = new ContentValues();
+        //registro.put("id", tipoMulta.getId());
+        registro.put("monto", tipoMulta.getMonto());
+        registro.put("tipo_multa", tipoMulta.getTipoMulta());
+        registro.put("descripcion", tipoMulta.getDescripcion());
+        registro.put("estado", tipoMulta.getEstado());
+        return bd.update("tipo_multa_estado", registro, "id=" + tipoMulta.getId()+"", null);
+    }
 
+    public int eliminar(String id) {
+        int cant = bd.delete("tipo_multa_estado", "id='" + id+"'", null);
+        actualizarCursor();
+        return cant;
+    }
+    public TipoMultaEstado obtenerTipoMulta(String numero){
+        fila = bd.rawQuery("SELECT * FROM tipo_multa_estado WHERE id='" +numero+"'", null);
+        if (fila.moveToFirst()) {
+            return generarTipoMulta(fila);
+        }
+        return null;
+    }
     public List<TipoMultaEstado> obtenerTiposMulta(){
         fila = bd.rawQuery("SELECT * FROM tipo_multa_estado", null);
         List<TipoMultaEstado> tiposMulta = new ArrayList<>();
@@ -54,5 +84,10 @@ public class TablaTipoMulta {
         tipoMulta.setDescripcion(fila.getString(3));
         tipoMulta.setEstado(fila.getString(4));
         return tipoMulta;
+    }
+
+    public void actualizarCursor(){
+        fila.close();
+        fila = bd.rawQuery("SELECT * FROM tipo_multa_estado", null);
     }
 }

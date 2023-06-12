@@ -16,6 +16,7 @@ import com.example.appdocumentaciontransito.tablas.TablaLicencia;
 import com.example.appdocumentaciontransito.tablas.TablaTipoMulta;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListadoMultasActivity extends AppCompatActivity {
     private ListView lvTiposMultas;
@@ -31,8 +32,10 @@ public class ListadoMultasActivity extends AppCompatActivity {
         lvTiposMultas = findViewById(R.id.lv_tipos_multas);
         tablaTipoMulta = new TablaTipoMulta(this);
         tiposMultas = new ArrayList<>();
+        List<TipoMultaEstado> multas = tablaTipoMulta.obtenerTiposMulta();
 
-        for(TipoMultaEstado tipoMulta : tablaTipoMulta.obtenerTiposMulta()){
+
+        for(TipoMultaEstado tipoMulta : multas){
             tiposMultas.add(tipoMulta.getTipoMulta() + "\t\t\t\t\t\t\t/ " + tipoMulta.getEstado());
         }
 
@@ -42,8 +45,8 @@ public class ListadoMultasActivity extends AppCompatActivity {
         lvTiposMultas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), DatosLicenciaActivity.class);
-                intent.putExtra("id", tablaTipoMulta.obtenerTiposMulta().get(i).getId());
+                Intent intent = new Intent(getApplicationContext(), DatosTipoMultaActivity.class);
+                intent.putExtra("id", ""+multas.get(i).getId());
                 startActivity(intent);
             }
         });
