@@ -103,6 +103,7 @@ public class InicioUsuarioActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                 }
+
                 // Cerrar el DrawerLayout después de seleccionar una opción
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
