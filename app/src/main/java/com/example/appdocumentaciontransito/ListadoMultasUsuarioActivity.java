@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import com.example.appdocumentaciontransito.modelo.Multa;
 import com.example.appdocumentaciontransito.modelo.TipoMultaEstado;
+import com.example.appdocumentaciontransito.modelo.Vehiculo;
 import com.example.appdocumentaciontransito.tablas.TablaMulta;
 import com.example.appdocumentaciontransito.tablas.TablaTipoMulta;
 
@@ -32,10 +33,18 @@ public class ListadoMultasUsuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_multas_usuario);
 
-        SharedPreferences preferences = getSharedPreferences("sesion", Context.MODE_PRIVATE);
+
         lvMultas = findViewById(R.id.lv_multas_usuario);
         tablaMulta = new TablaMulta(this);
         tablaTipoMulta = new TablaTipoMulta(this);
+
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+
+        SharedPreferences preferences = getSharedPreferences("sesion", Context.MODE_PRIVATE);
+
         multas = new ArrayList<>();
         tiposMultas = new ArrayList<>();
         nombresMultas = new ArrayList<>();

@@ -20,7 +20,7 @@
             android:id="@+id/textView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MI PERFIL"
+            android:text="PERFIL"
             android:textColor="@color/color11"
             android:textSize="@dimen/title_form"
             android:layout_marginHorizontal="15dp"

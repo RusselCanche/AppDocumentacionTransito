@@ -46,6 +46,11 @@ public class MiPerfilActivity extends AppCompatActivity {
         propietarioController = new PropietarioController(this);
         usuarioController = new UsuarioController(this);
         String curp_usuario = preferences.getString("curp_usuario", "");
+
+        if(getIntent().getStringExtra("curp_usuario")!=null){
+            curp_usuario = getIntent().getStringExtra("curp_usuario");
+        }
+
         Propietario propietario;
         Usuario usuario;
 

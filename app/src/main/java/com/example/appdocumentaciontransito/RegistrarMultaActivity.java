@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -33,6 +34,8 @@ public class RegistrarMultaActivity extends AppCompatActivity {
     private EditText municipio;
     private TablaTipoMulta tablaTipoMulta;
     private TablaMulta tablaMulta;
+    private DatePicker dpFecha;
+    private DatePicker dpFechaPago;
     private int idTipoMulta;
 
     @SuppressLint("MissingInflatedId")
@@ -45,6 +48,9 @@ public class RegistrarMultaActivity extends AppCompatActivity {
         fechaMulta = findViewById(R.id.edit_fecha_multa);
         fechaLimite = findViewById(R.id.edit_fecha_limite);
         municipio = findViewById(R.id.edit_municipio);
+
+        dpFecha = (DatePicker) findViewById(R.id.dpFechaMulta);
+        dpFechaPago = (DatePicker) findViewById(R.id.dpFechaLimite);
 
         tablaTipoMulta = new TablaTipoMulta(this);
         tablaMulta = new TablaMulta(this);
@@ -81,6 +87,21 @@ public class RegistrarMultaActivity extends AppCompatActivity {
 
             }
         });
+
+        dpFecha.setOnDateChangedListener(new DatePicker.OnDateChangedListener() {
+            @Override
+            public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
+                fechaMulta.setText(getFechaPicker());
+                //dpFecha.setVisibility(View.GONE);
+            }
+        });
+        dpFechaPago.setOnDateChangedListener(new DatePicker.OnDateChangedListener() {
+            @Override
+            public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
+                fechaLimite.setText(getFechaPicker2());
+                //dpFecha.setVisibility(View.GONE);
+            }
+        });
     }
 
     public void guardar(View v){
@@ -101,6 +122,36 @@ public class RegistrarMultaActivity extends AppCompatActivity {
             limpiarCajas();
         } else
             Toast.makeText(this, "¡Debe de ingresar todos los datos!", Toast.LENGTH_SHORT).show();
+    }
+
+    public String getFechaPicker(){
+        String dia = String.format("%02d", dpFecha.getDayOfMonth());
+        String mes = String.format("%02d", dpFecha.getMonth() + 1);
+        String anio = String.format("%04d", dpFecha.getYear());
+
+        return anio + "-" + mes + "-" + dia;
+    }
+    public String getFechaPicker2(){
+        String dia = String.format("%02d", dpFechaPago.getDayOfMonth());
+        String mes = String.format("%02d", dpFechaPago.getMonth() + 1);
+        String anio = String.format("%04d", dpFechaPago.getYear());
+
+        return anio + "-" + mes + "-" + dia;
+    }
+
+    public void muestraCalendarioFmulta(View view){
+        if(dpFecha.getVisibility() == View.VISIBLE){
+            dpFecha.setVisibility(View.GONE);
+        }else{
+            dpFecha.setVisibility(View.VISIBLE);
+        }
+    }
+    public void muestraCalendarioFmultaLimitePago(View view){
+        if(dpFechaPago.getVisibility() == View.VISIBLE){
+            dpFechaPago.setVisibility(View.GONE);
+        }else{
+            dpFechaPago.setVisibility(View.VISIBLE);
+        }
     }
 
     private boolean hayCajasVacias(){

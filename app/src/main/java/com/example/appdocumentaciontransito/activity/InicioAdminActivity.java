@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.appdocumentaciontransito.ListadoMultasActivity;
+import com.example.appdocumentaciontransito.ListadoUsuariosActivity;
 import com.example.appdocumentaciontransito.MiPerfilActivity;
 import com.example.appdocumentaciontransito.R;
 import com.example.appdocumentaciontransito.databinding.ActivityInicioAdminBinding;
@@ -84,9 +85,8 @@ public class InicioAdminActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case R.id.nav_usuarios:
-                        Toast.makeText(getApplicationContext(), "PENDIENTE USUARIOS", Toast.LENGTH_SHORT).show();
-                        //intent = new Intent(InicioAdminActivity.this, ListadoLicenciasActivity.class);
-                        //startActivity(intent);
+                        intent = new Intent(InicioAdminActivity.this, ListadoUsuariosActivity.class);
+                        startActivity(intent);
                         break;
                     case R.id.nav_multas:
                         intent = new Intent(InicioAdminActivity.this, ListadoMultasActivity.class);

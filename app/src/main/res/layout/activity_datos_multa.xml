@@ -1,9 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DatosMultaActivity">
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INFO MULTA"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/title_form"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView65"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estado multa"
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form"/>
+
+    <Spinner
+        android:id="@+id/sp_estado_multa_dat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de multa"
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form"/>
+
+    <Spinner
+        android:id="@+id/sp_tipos_multa_registro_dat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textView63"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monto"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_monto_multa_dat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha multa"
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:hint="yyyy-mm-dd"
+            android:textColorHint="@color/color2"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_fecha_multa_dat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnFechaMulta"
+            android:layout_width="@dimen/btn_icon"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/color2"
+            android:gravity="center_horizontal|top"
+            android:onClick="muestraCalendarioFmulta"
+            app:icon="@drawable/baseline_calendar_month_24"
+            app:iconSize="@dimen/icon_size_form" />
+    </LinearLayout>
+    <DatePicker
+        android:id="@+id/dpFechaMulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:visibility="gone"></DatePicker>
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha límite de pago"
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:hint="yyyy-mm-dd"
+            android:textColorHint="@color/color2"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_fecha_limite_dat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnFechaLimite"
+            android:layout_width="@dimen/btn_icon"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/color2"
+            android:gravity="center_horizontal|top"
+            android:onClick="muestraCalendarioFmultaLimitePago"
+            app:icon="@drawable/baseline_calendar_month_24"
+            app:iconSize="@dimen/icon_size_form" />
+    </LinearLayout>
+    <DatePicker
+        android:id="@+id/dpFechaLimite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:visibility="gone"></DatePicker>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textView64"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Municipio"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_municipio_dat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

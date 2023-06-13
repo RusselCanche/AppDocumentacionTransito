@@ -26,7 +26,7 @@
             android:title="@string/menu_mis_multas" />
         <item
             android:id="@+id/nav_gps"
-            android:icon="@drawable/baseline_back_hand_24"
+            android:icon="@drawable/baseline_gps_fixed_24"
             android:title="@string/menu_gps" />
     </group>
 </menu>

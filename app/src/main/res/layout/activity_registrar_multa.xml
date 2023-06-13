@@ -105,9 +105,9 @@
             android:id="@+id/btnFechaMulta"
             android:layout_width="@dimen/btn_icon"
             android:layout_height="wrap_content"
-            android:onClick="muestraCalendarioFnacUsuario"
             android:backgroundTint="@color/color2"
             android:gravity="center_horizontal|top"
+            android:onClick="muestraCalendarioFmulta"
             app:icon="@drawable/baseline_calendar_month_24"
             app:iconSize="@dimen/icon_size_form" />
     </LinearLayout>
@@ -158,9 +158,9 @@
             android:id="@+id/btnFechaLimite"
             android:layout_width="@dimen/btn_icon"
             android:layout_height="wrap_content"
-            android:onClick="muestraCalendarioFnacUsuario"
             android:backgroundTint="@color/color2"
             android:gravity="center_horizontal|top"
+            android:onClick="muestraCalendarioFmultaLimitePago"
             app:icon="@drawable/baseline_calendar_month_24"
             app:iconSize="@dimen/icon_size_form" />
     </LinearLayout>
