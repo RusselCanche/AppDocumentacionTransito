@@ -25,147 +25,220 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="REGISTRAR VEHICULO"
-                android:textColor="@color/purple_700"
-                android:textSize="24sp" />
+                android:textColor="@color/color1"
+                android:textSize="@dimen/title_form" />
 
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textView25"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Número de serie" />
+                android:hint="Número de serie"
+                android:textColorHint="@color/color2"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                android:layout_margin="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_numero_serie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edit_numero_serie"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textView26"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Número de placas" />
+                android:hint="Número de placas"
+                android:textColorHint="@color/color2"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                android:layout_margin="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_numero_placas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edit_numero_placas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textView27"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Marca" />
+                android:hint="Marca"
+                android:textColorHint="@color/color2"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                android:layout_margin="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_marca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edit_marca"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textView28"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Modelo" />
+                android:hint="Modelo"
+                android:textColorHint="@color/color2"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                android:layout_margin="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_modelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edit_modelo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textView29"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Año" />
+                android:hint="Año"
+                android:textColorHint="@color/color2"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                android:layout_margin="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_anio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edit_anio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textView30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tipo" />
+                android:hint="Tipo"
+                android:textColorHint="@color/color2"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                android:layout_margin="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_tipo_vehiculo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edit_tipo_vehiculo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textView31"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Número de motor" />
-
-            <EditText
-                android:id="@+id/edit_numero_motor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:hint="Número de motor"
+                android:textColorHint="@color/color2"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                android:layout_margin="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_numero_motor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/textView32"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tarjeta de circulación"
-                android:textColor="@color/purple_700"
-                android:textSize="20sp" />
+                android:textColor="@color/color1"
+                android:textSize="@dimen/title_form" />
 
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textView33"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Número de serie (tarjeta)" />
-
-            <EditText
-                android:id="@+id/edit_numero_tarjeta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:hint="Número de serie (tarjeta)"
+                android:textColorHint="@color/color2"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                android:layout_margin="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_numero_tarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/textView34"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fecha de emisión" />
+                android:text="Fecha de emisión"
+                android:paddingHorizontal="@dimen/pd_etiquetas_form"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/etiquetas_form"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/edit_fecha_emision_circulacion"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="308dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:hint="yyyy-mm-dd"
-                    android:inputType="textPersonName" />
+                    android:textColorHint="@color/color2"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    android:layout_margin="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <ImageButton
-                    android:id="@+id/btnFechaEmisionCirculacion"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_fecha_emision_circulacion"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnFechaEmisionCirculacion"
+                    android:layout_width="@dimen/btn_icon"
+                    android:layout_height="wrap_content"
                     android:onClick="muestraCalendarioFemVehiculo"
-                    app:srcCompat="@drawable/baseline_calendar_month_24" />
+                    android:backgroundTint="@color/color2"
+                    android:gravity="center_horizontal|top"
+                    app:icon="@drawable/baseline_calendar_month_24"
+                    app:iconSize="@dimen/icon_size_form" />
             </LinearLayout>
 
             <DatePicker
@@ -180,28 +253,45 @@
                 android:id="@+id/textView35"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fecha de expiración" />
+                android:text="Fecha de expiración"
+                android:paddingHorizontal="@dimen/pd_etiquetas_form"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/etiquetas_form"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/edit_fecha_expiracion_circulacion"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="308dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:hint="yyyy-mm-dd"
-                    android:inputType="textPersonName" />
+                    android:textColorHint="@color/color2"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    android:layout_margin="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <ImageButton
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_fecha_expiracion_circulacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
                     android:id="@+id/btnFechaExpiracionCirculacion"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/btn_icon"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:onClick="muestraCalendarioFexVehiculo"
-                    app:srcCompat="@drawable/baseline_calendar_month_24" />
+                    android:backgroundTint="@color/color2"
+                    android:gravity="center_horizontal|top"
+                    app:icon="@drawable/baseline_calendar_month_24"
+                    app:iconSize="@dimen/icon_size_form" />
             </LinearLayout>
 
             <DatePicker
@@ -212,24 +302,34 @@
                 android:datePickerMode="spinner"
                 android:visibility="gone"></DatePicker>
 
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textView36"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Estado de emisión" />
-
-            <EditText
-                android:id="@+id/edit_estado_tarjeta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:hint="Estado de emisión"
+                android:textColorHint="@color/color2"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                android:layout_margin="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_estado_tarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/textView37"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Imagen de la tarjeta de circulación" />
+                android:text="Imagen de la tarjeta de circulación"
+                android:paddingHorizontal="@dimen/pd_etiquetas_form"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/etiquetas_form"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -242,12 +342,14 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
 
-                <ImageButton
+                <Button
                     android:id="@+id/btn_buscar_img_tarjeta"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/btn_icon"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/baseline_calendar_month_24" />
+                    android:backgroundTint="@color/color2"
+                    android:gravity="center_horizontal|top"
+                    app:icon="@drawable/baseline_image_24"
+                    app:iconSize="@dimen/icon_size_form" />
             </LinearLayout>
 
             <ImageView
@@ -261,7 +363,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="guardar"
-                android:text="Guardar" />
+                android:text="Guardar"
+                app:icon="@drawable/baseline_save_24"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

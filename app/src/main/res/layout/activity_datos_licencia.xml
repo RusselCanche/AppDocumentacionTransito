@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,63 +18,94 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="DATOS DE LA LICENCIA"
-        android:textColor="@color/purple_700"
-        android:textSize="24sp" />
+        android:textColor="@color/color1"
+        android:textSize="@dimen/title_form" />
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView17"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Número de licencia" />
+        android:hint="Número de licencia"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edit_numero_licencia_cons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Número de licencia"
-        android:inputType="textPersonName" />
+        />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView18"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tipo" />
-
-    <EditText
-        android:id="@+id/edit_tipo_lic_cons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="Tipo"
-        android:inputType="textPersonName" />
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_tipo_lic_cons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/textView19"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fecha de emisión" />
+        android:text="Fecha de emisión"
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/edit_fecha_emision_cons"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="308dp"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="yyyy-mm-dd"
-            android:inputType="textPersonName" />
+            android:textColorHint="@color/color2"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <ImageButton
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_fecha_emision_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
             android:id="@+id/btnFechaEmisionCons"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/btn_icon"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:onClick="muestraCalendario"
-            app:srcCompat="@drawable/baseline_calendar_month_24" />
+            android:backgroundTint="@color/color2"
+            android:gravity="center_horizontal|top"
+            app:icon="@drawable/baseline_calendar_month_24"
+            app:iconSize="@dimen/icon_size_form" />
     </LinearLayout>
 
     <DatePicker
@@ -81,28 +118,46 @@
         android:id="@+id/textView20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fecha de expiración" />
+        android:text="Fecha de expiración"
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/edit_fecha_expiracion_cons"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="308dp"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="yyyy-mm-dd"
-            android:inputType="textPersonName" />
+            android:textColorHint="@color/color2"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <ImageButton
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_fecha_expiracion_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
             android:id="@+id/btnFechaExpiracionCons"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/btn_icon"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:onClick="muestraCalendario"
-            app:srcCompat="@drawable/baseline_calendar_month_24" />
+            android:backgroundTint="@color/color2"
+            android:gravity="center_horizontal|top"
+            app:icon="@drawable/baseline_calendar_month_24"
+            app:iconSize="@dimen/icon_size_form" />
     </LinearLayout>
 
     <DatePicker
@@ -111,25 +166,33 @@
         android:layout_height="wrap_content"
         android:visibility="gone"></DatePicker>
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView21"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Estado de emisión" />
-
-    <EditText
-        android:id="@+id/edit_estado_emision_cons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Estado"
-        android:inputType="textPersonName" />
-
+        android:hint="Estado de emision"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_estado_emision_cons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/textView23"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Imagen de la licencia" />
+        android:text="Imagen de la licencia"
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -141,14 +204,16 @@
             android:layout_width="254dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="" />
 
-        <ImageButton
+        <Button
             android:id="@+id/btnBuscarImgCons"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/btn_icon"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/baseline_calendar_month_24" />
+            android:backgroundTint="@color/color2"
+            android:gravity="center_horizontal|top"
+            app:icon="@drawable/baseline_image_24"
+            app:iconSize="@dimen/icon_size_form" />
     </LinearLayout>
 
     <ImageView
@@ -167,7 +232,8 @@
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:onClick="modificar"
-            android:text="Modificar" />
+            android:text="Modificar"
+            app:icon="@drawable/baseline_edit_24"/>
 
         <Button
             android:id="@+id/button9"
@@ -176,7 +242,9 @@
             android:layout_weight="1"
             android:backgroundTint="@color/design_default_color_error"
             android:onClick="eliminar"
-            android:text="Eliminar" />
+            android:text="Eliminar"
+            app:icon="@drawable/baseline_delete_24"
+            />
     </LinearLayout>
-
 </LinearLayout>
+</ScrollView>

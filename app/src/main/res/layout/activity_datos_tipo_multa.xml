@@ -12,51 +12,76 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TIPO DE MULTA"
-        android:textColor="@color/purple_700"
-        android:textSize="24sp" />
+        android:textColor="@color/color1"
+        android:textSize="@dimen/title_form" />
 
     <TextView
         android:id="@+id/textView55"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tipo de multa"/>
+        android:text="Tipo de multa"
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form"/>
 
     <Spinner
         android:id="@+id/sp_tipos_multa_me"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView56"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Monto" />
+        android:hint="Monto"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edit_monto_tm_me"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_monto_tm_me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            />
 
-    <TextView
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textView57"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Descripción breve" />
+        android:hint="Descripción breve"
+        android:textColorHint="@color/color2"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edit_descripcion_me"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_descripcion_me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView58"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Estado" />
+        android:text="Estado"
+        android:paddingHorizontal="@dimen/pd_etiquetas_form"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/etiquetas_form"/>
 
     <Spinner
         android:id="@+id/sp_estados_me"
@@ -72,7 +97,8 @@
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:onClick="modificarTipoMultaEstado"
-        android:text="Modificar" />
+        android:text="Modificar"
+        app:icon="@drawable/baseline_edit_24"/>
 
     <Button
         android:id="@+id/button9"
@@ -81,6 +107,7 @@
         android:layout_weight="1"
         android:backgroundTint="@color/design_default_color_error"
         android:onClick="eliminarTipoMultaEstado"
-        android:text="Eliminar" />
+        android:text="Eliminar"
+        app:icon="@drawable/baseline_delete_24"/>
     </LinearLayout>
 </LinearLayout>

@@ -61,11 +61,11 @@ public class DatosVehiculoActivity extends AppCompatActivity {
     private DatePicker dpFechaExpiracion;
     private DatePicker dpFechaVerificacion;
     private DatePicker dpProximaVerificacion;
-    private ImageButton btnFechaEmision;
-    private ImageButton btnFechaExpiracion;
+    private Button btnFechaEmision;
+    private Button btnFechaExpiracion;
     private ImageButton btnFechaVerificacion;
     private ImageButton btnProximaVerificacion;
-    private ImageButton btnExploradorImg;
+    private Button btnExploradorImg;
     private ImageButton btnExploradorImgVerificacion;
     private TablaVehiculo tablaVehiculo;
     private TablaTarjetaCirculacion tablaTarjetaCirculacion;

@@ -1,16 +1,21 @@
 package com.example.appdocumentaciontransito.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.appdocumentaciontransito.ListadoMultasActivity;
 import com.example.appdocumentaciontransito.MiPerfilActivity;
 import com.example.appdocumentaciontransito.R;
 import com.example.appdocumentaciontransito.databinding.ActivityInicioAdminBinding;
+import com.example.appdocumentaciontransito.modelo.Usuario;
+import com.example.appdocumentaciontransito.tablas.UsuarioController;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,16 +28,18 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 
 public class InicioAdminActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityInicioAdminBinding binding;
-
+    private TextView tituloNombre;
+    private TextView tituloCurp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityInicioAdminBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -46,6 +53,10 @@ public class InicioAdminActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+        View headerView = navigationView.getHeaderView(0);
+        tituloNombre= headerView.findViewById(R.id.nav_username_admin_title);
+        tituloCurp= headerView.findViewById(R.id.nav_curp_admin_title);
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -88,6 +99,13 @@ public class InicioAdminActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
+        UsuarioController usuarioController = new UsuarioController(this);
+        SharedPreferences preferences = getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        Usuario usuario = usuarioController.obtenerUsuario(preferences.getString("curp_usuario", ""));
+        tituloNombre.setText(usuario.getUsername());
+        tituloCurp.setText(usuario.getCurpPropietario());
     }
 
     @Override

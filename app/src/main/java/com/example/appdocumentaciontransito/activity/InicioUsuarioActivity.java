@@ -1,12 +1,16 @@
 package com.example.appdocumentaciontransito.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.appdocumentaciontransito.GPSActivity;
 import com.example.appdocumentaciontransito.ListadoLicenciasActivity;
 import com.example.appdocumentaciontransito.ListadoMultasActivity;
 import com.example.appdocumentaciontransito.ListadoMultasUsuarioActivity;
@@ -15,6 +19,8 @@ import com.example.appdocumentaciontransito.MiPerfilActivity;
 import com.example.appdocumentaciontransito.R;
 import com.example.appdocumentaciontransito.RegistroUsuarioActivity;
 import com.example.appdocumentaciontransito.databinding.ActivityInicioUsuarioBinding;
+import com.example.appdocumentaciontransito.modelo.Usuario;
+import com.example.appdocumentaciontransito.tablas.UsuarioController;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -32,7 +38,8 @@ public class InicioUsuarioActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityInicioUsuarioBinding binding;
-
+    private TextView tituloNombre;
+    private TextView tituloCurp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +57,10 @@ public class InicioUsuarioActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+
+        View headerView = navigationView.getHeaderView(0);
+        tituloNombre= headerView.findViewById(R.id.nav_username_usuario_title);
+        tituloCurp= headerView.findViewById(R.id.nav_curp_usuario_title);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -87,13 +98,22 @@ public class InicioUsuarioActivity extends AppCompatActivity {
                         intent = new Intent(InicioUsuarioActivity.this, ListadoMultasUsuarioActivity.class);
                         startActivity(intent);
                         break;
+                    case R.id.nav_gps:
+                        intent = new Intent(InicioUsuarioActivity.this, GPSActivity.class);
+                        startActivity(intent);
+                        break;
                 }
-
                 // Cerrar el DrawerLayout después de seleccionar una opción
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
             }
         });
+
+        UsuarioController usuarioController = new UsuarioController(this);
+        SharedPreferences preferences = getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        Usuario usuario = usuarioController.obtenerUsuario(preferences.getString("curp_usuario", ""));
+        tituloNombre.setText(usuario.getUsername());
+        tituloCurp.setText(usuario.getCurpPropietario());
     }
 
     @Override

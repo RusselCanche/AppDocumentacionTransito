@@ -31,13 +31,11 @@
             app:boxCornerRadiusBottomStart="10dp"
             android:layout_margin="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_curp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
-
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -167,6 +165,7 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal" >
 
             <RadioButton
@@ -174,13 +173,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Masculino" />
+                android:text="Masculino"
+                android:layout_marginHorizontal="20sp"
+                android:buttonTint="@color/color11"/>
 
             <RadioButton
                 android:id="@+id/radio_femenino"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Femenino" />
+                android:text="Femenino"
+                android:layout_marginHorizontal="20sp"
+                android:buttonTint="@color/color11"/>
 
         </RadioGroup>
 
@@ -278,6 +281,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="guardar"
-            android:text="Registrarme" />
+            android:text="Registrarme"
+            app:icon="@drawable/baseline_done_24"
+            />
+
     </LinearLayout>
 </ScrollView>

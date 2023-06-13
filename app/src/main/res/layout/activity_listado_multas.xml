@@ -31,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="TIPOS DE MULTAS"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/color11"
                     android:textSize="24sp" />
 
                 <Button
@@ -40,7 +40,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onRegistrarTipoMulta"
-                    android:text="Registrar" />
+                    android:text="Registrar"
+                    app:icon="@drawable/baseline_edit_note_24"/>
 
             </LinearLayout>
 

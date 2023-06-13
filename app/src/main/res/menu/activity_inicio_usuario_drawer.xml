@@ -24,5 +24,9 @@
             android:id="@+id/nav_mis_multas"
             android:icon="@drawable/baseline_back_hand_24"
             android:title="@string/menu_mis_multas" />
+        <item
+            android:id="@+id/nav_gps"
+            android:icon="@drawable/baseline_back_hand_24"
+            android:title="@string/menu_gps" />
     </group>
 </menu>

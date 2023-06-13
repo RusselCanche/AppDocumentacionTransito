@@ -17,6 +17,7 @@
     <string name="menu_mis_multas">Mis multas</string>
     <string name="menu_usuarios">Usuarios</string>
     <string name="menu_multas">Multas</string>
+    <string name="menu_gps">GPS</string>
     <string name="title_activity_inicio_usuario">InicioUsuarioActivity</string>
 
     <string-array name="estados_array">
@@ -26,7 +27,7 @@
         <item>Campeche</item>
         <item>Chiapas</item>
         <item>Chihuahua</item>
-        <item>Ciudad de Mexico</item>
+        <item>Ciudad de México</item>
         <item>Coahuila</item>
         <item>Colima</item>
         <item>Durango</item>

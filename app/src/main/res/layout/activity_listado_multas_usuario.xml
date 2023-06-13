@@ -39,7 +39,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onRegistrarMulta"
-                    android:text="Registrar" />
+                    android:text="Registrar"
+                    app:icon="@drawable/baseline_edit_note_24"/>
             </LinearLayout>
 
             <ListView

@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -46,9 +47,9 @@ public class RegistrarVehiculoActivity extends AppCompatActivity {
     private File file;
     private DatePicker dpFechaEmision;
     private DatePicker dpFechaExpiracion;
-    private ImageButton btnFechaEmision;
-    private ImageButton btnFechaExpiracion;
-    private ImageButton btnExploradorImg;
+    private Button btnFechaEmision;
+    private Button btnFechaExpiracion;
+    private Button btnExploradorImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

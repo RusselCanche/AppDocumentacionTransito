@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -33,11 +34,11 @@ public class DatosLicenciaActivity extends AppCompatActivity {
     private EditText estadoEmision;
     private DatePicker dpFechaEmision;
     private DatePicker dpFechaExpiracion;
-    private ImageButton btnFechaEmision;
-    private ImageButton btnFechaExpiracion;
+    private Button btnFechaEmision;
+    private Button btnFechaExpiracion;
 
     private File file;
-    private ImageButton btnExplorador;
+    private Button btnExplorador;
     private TextView tvURL;
     private ImageView imageLicencia;
     private TablaLicencia tablaLicencia;
@@ -55,11 +56,11 @@ public class DatosLicenciaActivity extends AppCompatActivity {
         estadoEmision = findViewById(R.id.edit_estado_emision_cons);
 
         dpFechaEmision = (DatePicker) findViewById(R.id.dpFechaEmisionCons);
-        btnFechaEmision = (ImageButton) findViewById(R.id.btnFechaEmisionCons);
+        btnFechaEmision = (Button) findViewById(R.id.btnFechaEmisionCons);
         fechaEmision = (EditText) findViewById(R.id.edit_fecha_emision_cons);
 
         dpFechaExpiracion = (DatePicker) findViewById(R.id.dpFechaExpiracionCons);
-        btnFechaExpiracion = (ImageButton) findViewById(R.id.btnFechaExpiracionCons);
+        btnFechaExpiracion = (Button) findViewById(R.id.btnFechaExpiracionCons);
         fechaExpiracion = (EditText) findViewById(R.id.edit_fecha_expiracion_cons);
 
         tvURL = findViewById(R.id.tv_url_cons);
